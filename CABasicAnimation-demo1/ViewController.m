@@ -4,10 +4,10 @@
 //
 //  Created by huanghy on 16/4/14.
 //  Copyright © 2016年 huanghy. All rights reserved.
-//
+//长按图片触发CABasicAnimation晃动动画； 点击任意位置停止动画。
 
 #import "ViewController.h"
-//长按图片触发CABasicAnimation晃动动画； 点击任意位置停止动画。
+
 @interface ViewController ()<UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *shakeImageView;
 
@@ -39,8 +39,6 @@
     shake.fromValue = [NSNumber numberWithFloat:-50];
     shake.toValue = [NSNumber numberWithFloat:50];
     [[_shakeImageView layer] addAnimation:shake forKey:@"shareAnimation"];
-    
-    
     
 }
 
