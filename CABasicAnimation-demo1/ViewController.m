@@ -18,15 +18,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //No.1
     //开始写代码，给_shakeImageView添加长按手势
     UILongPressGestureRecognizer * longPressGr = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressToDo:)];
     longPressGr.delegate = self;
     [_shakeImageView setUserInteractionEnabled:YES];
     [_shakeImageView addGestureRecognizer:longPressGr];
-    //end_code
 }
-//No.2
+
 //开始写代码，使用CABasicAnimation使图片长按时无限左右晃动
 -(void)longPressToDo:(UILongPressGestureRecognizer *)gesture {
     
@@ -42,10 +40,6 @@
     
 }
 
-//end_code
-
-
-//No.3
 //开始写代码，点击任意位置取消晃动动画
 - (void)touchesBegan:(UITouch *)touches withEvent:(UIEvent *)event
 {
